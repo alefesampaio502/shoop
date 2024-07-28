@@ -19,7 +19,7 @@ class VendorMiddleware
     {
         if (Auth::check() && (Auth::user()->role == 'vendor' || Auth::user()->role == 'admin')) {
             return $next($request);
-        }
+            }
 
         return redirect('/'); // Ou redirecionar para uma página apropriada
     }
